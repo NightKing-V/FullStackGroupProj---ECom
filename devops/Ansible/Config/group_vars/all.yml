@@ -1,0 +1,3 @@
+docker_env:
+  ansi_frontend_image: "{{ docker_frontend_image }}"
+  ansi_backend_image: "{{ docker_backend_image }}"

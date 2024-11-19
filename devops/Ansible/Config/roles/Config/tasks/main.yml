@@ -1,0 +1,109 @@
+---
+# roles/Config/tasks/main.yml
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+
+- name: Install prerequisites
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
+    state: present
+
+- name: Add Docker’s official GPG key
+  ansible.builtin.apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker apt repository
+  ansible.builtin.apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+    state: present
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+    state: present
+    update_cache: yes
+
+- name: Install Docker Compose
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-{{ ansible_system }}-{{ ansible_architecture }}"
+    dest: /usr/local/bin/docker-compose
+    mode: '0755'
+
+- name: Verify Docker Compose installation
+  command: docker-compose --version
+  register: docker_compose_version_output
+
+- name: Display Docker Compose version
+  debug:
+    msg: "Docker Compose version installed: {{ docker_compose_version_output.stdout }}"
+
+- name: Copy nginx config file to remote host
+  copy:
+    src: ./files/nginx
+    dest: ./
+
+
+- name: Copy docker-compose file to remote host
+  copy:
+    src: ./files/docker-compose.yml
+    dest: ./
+
+- name: Ensure Docker is started
+  service:
+    name: docker
+    state: started
+
+- name: Add user to docker group
+  user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes
+
+- name: Log into Docker Hub
+  docker_login:
+    username: "{{ docker_username }}"
+    password: "{{ docker_password }}"
+
+- name: Pull Frontend Docker image
+  community.docker.docker_image:
+    name: "{{ docker_env.ansi_frontend_image }}"
+    source: pull
+    state: present
+    force_source: yes
+
+- name: Pull Backend Docker image
+  community.docker.docker_image:
+    name: "{{ docker_env.ansi_backend_image }}"
+    source: pull
+    state: present
+    force_source: yes
+
+
+- name: Take down services using Docker Compose
+  command: docker compose down -v
+  environment: "{{ docker_env }}"
+
+- name: Build services using Docker Compose without cache
+  command: docker compose build --no-cache
+  environment: "{{ docker_env }}"
+
+- name: Start services using Docker Compose
+  command: docker compose up -d
+  environment: "{{ docker_env }}"
+
+- name: Remove unused Docker objects
+  ansible.builtin.shell:
+    cmd: docker system prune -af
+  register: prune_result
+
+- name: Show prune results
+  ansible.builtin.debug:
+    var: prune_result.stdout_lines

@@ -1,0 +1,22 @@
+name: Staging Deployment Openstack
+
+on:
+    # push:
+    #   branches:
+    #     - "main"
+    workflow_dispatch:   
+  
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print Git Info
+        run: |
+          echo "Current branch: $(git rev-parse --abbrev-ref HEAD)"
+          echo "Latest commit: $(git log -1 --pretty=format:'%h - %s')"
+          echo "Repository URL: $(git config --get remote.origin.url)"
+        

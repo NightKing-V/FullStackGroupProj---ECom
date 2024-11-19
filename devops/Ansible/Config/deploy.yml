@@ -1,0 +1,11 @@
+- name: Server Config
+  hosts: app_instance
+  become: true
+  vars:
+    docker_compose_version: "v2.23.3"
+    docker_config: "/usr/local/bin"
+    docker_compose_url: >
+      https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-linux-x86_64
+
+  roles:
+    - role: Config
