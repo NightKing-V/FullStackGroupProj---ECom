@@ -11,8 +11,12 @@ RUN npm install --production
 # Copy application code
 COPY src ./src
 
+# Copy entrypoint script and make it executable
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 # Expose the application port
 EXPOSE 3000
 
-# Start the server
-CMD ["npm", "start"]
+# Use entrypoint script
+ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
