@@ -1,0 +1,143 @@
+[
+    {
+      "email": "admin@example.com",
+      "firstName": "Admin",
+      "lastName": "User",
+      "address": {
+        "street": "100 Admin Road",
+        "city": "Admin City",
+        "state": "Admin State",
+        "postalCode": "12345",
+        "country": "Adminland"
+      },
+      "role": "admin",
+      "password": "adminpassword"
+    },
+    {
+      "email": "john.doe@example.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": {
+        "street": "123 Main St",
+        "city": "Colombo",
+        "state": "Western Province",
+        "postalCode": "10100",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword1"
+    },
+    {
+      "email": "jane.doe@example.com",
+      "firstName": "Jane",
+      "lastName": "Doe",
+      "address": {
+        "street": "456 Side St",
+        "city": "Kandy",
+        "state": "Central Province",
+        "postalCode": "20000",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword2"
+    },
+    {
+      "email": "alice.wonderland@example.com",
+      "firstName": "Alice",
+      "lastName": "Wonderland",
+      "address": {
+        "street": "789 Wonderland Ave",
+        "city": "Galle",
+        "state": "Southern Province",
+        "postalCode": "80000",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword3"
+    },
+    {
+      "email": "bob.builder@example.com",
+      "firstName": "Bob",
+      "lastName": "Builder",
+      "address": {
+        "street": "321 Builder Rd",
+        "city": "Jaffna",
+        "state": "Northern Province",
+        "postalCode": "40000",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword4"
+    },
+    {
+      "email": "charlie.brown@example.com",
+      "firstName": "Charlie",
+      "lastName": "Brown",
+      "address": {
+        "street": "654 Snoopy St",
+        "city": "Matara",
+        "state": "Southern Province",
+        "postalCode": "81000",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword5"
+    },
+    {
+      "email": "david.king@example.com",
+      "firstName": "David",
+      "lastName": "King",
+      "address": {
+        "street": "987 Royal Rd",
+        "city": "Negombo",
+        "state": "Western Province",
+        "postalCode": "11500",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword6"
+    },
+    {
+      "email": "emma.green@example.com",
+      "firstName": "Emma",
+      "lastName": "Green",
+      "address": {
+        "street": "123 Forest Lane",
+        "city": "Kurunegala",
+        "state": "North Western Province",
+        "postalCode": "60000",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword7"
+    },
+    {
+      "email": "frank.castle@example.com",
+      "firstName": "Frank",
+      "lastName": "Castle",
+      "address": {
+        "street": "456 War St",
+        "city": "Anuradhapura",
+        "state": "North Central Province",
+        "postalCode": "50000",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword8"
+    },
+    {
+      "email": "grace.hopper@example.com",
+      "firstName": "Grace",
+      "lastName": "Hopper",
+      "address": {
+        "street": "789 Code St",
+        "city": "Nuwara Eliya",
+        "state": "Central Province",
+        "postalCode": "22200",
+        "country": "Sri Lanka"
+      },
+      "role": "user",
+      "password": "securepassword9"
+    }
+  ]
+  

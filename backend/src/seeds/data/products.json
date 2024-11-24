@@ -1,0 +1,429 @@
+[
+  {
+    "ID": "01",
+    "Name": "Nike Pegasus Plus",
+    "Category": "Running Shoes",
+    "Brand": "Nike",
+    "Price": 54000,
+    "Description": "The Nike Pegasus Plus is a high-performance running shoe designed to provide excellent cushioning and support for everyday runs. Featuring Flyknit upper for breathability and ZoomX foam midsole for responsive cushioning, it offers a smooth, energizing ride with every step. The high-abrasion rubber outsole ensures durability and traction, while the midfoot band keeps your foot secure during your run.",
+    "Benefits": [
+      "Flyknit upper with perforations for reduced weight and enhanced breathability.",
+      "ZoomX foam midsole for responsive, springy cushioning and energy return.",
+      "High-abrasion rubber outsole for durability and superior traction."
+    ],
+    "ProductDetails": {
+      "Weight": "Approx. 245 g/8.6 oz (Men's US 10)",
+      "Heel-to-toe drop": "10 mm",
+      "Intended Use": "Not intended for use as Personal Protective Equipment (PPE)",
+      "Color": "White/Sail/Light Orewood Brown/Anthracite"
+    },
+    "Images": ["1.1.png", "1.2.png", "1.3.png"]
+  },
+  {
+    "ID": "02",
+    "Name": "Nike InfinityRN 4",
+    "Category": "Running Shoes",
+    "Brand": "Nike",
+    "Price": 48000,
+    "Description": "The Nike InfinityRN 4 delivers maximum cushioning for elevated comfort during everyday runs. It features a rocker-shaped platform with ReactX foam in the midsole, providing a soft and responsive feel. The updated Flyknit upper and water-resistant membrane keep you dry, while the ultra-comfortable collar and tongue provide a snug fit. The new ReactX foam and wider toe box enhance the overall comfort and performance of this version.",
+    "Benefits": [
+      "Updated Flyknit upper with water-resistant membrane to keep you dry.",
+      "New ReactX foam in the midsole for extra cushioning and comfort.",
+      "Waffle outsole for durable traction, perfect for road running."
+    ],
+    "ProductDetails": {
+      "Weight": "Approx. 354g/12.5oz (Men's US 10)",
+      "Heel-to-toe drop": "9mm",
+      "Intended Use": "Not intended for use as Personal Protective Equipment (PPE)",
+      "Color": "Black/Dark Grey/White"
+    },
+    "Images": ["2.1.png", "2.2.png", "2.3.png"]
+  },
+  {
+    "ID": "03",
+    "Name": "Nike Pegasus Trail 5",
+    "Category": "Running Shoes",
+    "Brand": "Nike",
+    "Price": 45000,
+    "Description": "The Nike Pegasus Trail 5 is designed to conquer both dirt trails and paved roads with its ultra-responsive ReactX foam midsole. This versatile shoe combines cushioning with breathability, featuring mesh uppers for ventilation and Flywire technology for a secure fit. The outsole is designed for all-direction traction, providing grip on technical trails while ensuring a smooth transition to the road. Reflective details offer visibility during low-light conditions.",
+    "Benefits": [
+      "Nike ReactX foam midsole provides extra cushioning for enhanced comfort.",
+      "Breathable mesh upper with Flywire technology offers a secure and ventilated fit.",
+      "Generative traction pattern and rubber forefoot for all-direction grip on trails and roads."
+    ],
+    "ProductDetails": {
+      "Weight": "Approx. 300 g/10.5 oz (Men's US 10)",
+      "Heel-to-toe drop": "9.5 mm",
+      "Reflective Details": "Yes",
+      "Intended Use": "Not intended for use as Personal Protective Equipment (PPE)",
+      "Color": "Smokey Blue/Light Silver/Armory Navy/Smokey Blue"
+    },
+    "Images": ["3.1.png", "3.2.png", "3.3.png"]
+  },
+  {
+    "ID": "04",
+    "Name": "Men's Fila Racer Energized",
+    "Category": "Running Shoes",
+    "Brand": "Fila",
+    "Price": 12750,
+    "Description": "The Men's Fila Racer Energized is built for comfort and durability, making it an excellent choice for daily runs. Its cushioned platform absorbs impact, while the heavy-duty bottom tread provides superior traction. The durable leather and mesh upper ensure breathability and long-lasting performance, rain or shine.",
+    "Benefits": [
+      "Cushioned platform for enhanced comfort and impact absorption.",
+      "Heavy-duty bottom tread offers excellent traction on various surfaces.",
+      "Durable leather and mesh upper for breathability and weather resistance."
+    ],
+    "ProductDetails": {
+      "Color": "Black/Castlerock/White"
+    },
+    "Images": ["4.1.png", "4.2.png", "4.3.png"]
+  },
+  {
+    "ID": "05",
+    "Name": "Adizero SL2 Running Shoes",
+    "Category": "Running Shoes",
+    "Brand": "Adidas",
+    "Price": 42200,
+    "Description": "The Adizero SL2 Running Shoes are lightweight and designed for speed, making them perfect for breaking personal records. Featuring responsive Lightstrike Pro cushioning for exceptional energy return and an engineered mesh upper for targeted support and breathability, these shoes keep you comfortable and fast. Made with at least 20% recycled materials, they are part of Adidas' commitment to reducing waste and environmental impact.",
+    "Benefits": [
+      "Lightstrike Pro cushioning delivers energy return for next-level speed.",
+      "Engineered mesh upper provides breathability and targeted support.",
+      "Made with at least 20% recycled materials to reduce waste and environmental footprint."
+    ],
+    "ProductDetails": {
+      "Fit": "Regular",
+      "Closure": "Lace",
+      "Upper Material": "Mesh",
+      "Lining": "Textile",
+      "Outsole": "Rubber",
+      "Weight": "238 g (size UK 8.5)",
+      "Midsole Drop": "9.5 mm (heel 36.9 mm / forefoot 27.4 mm)",
+      "Color": "Cobalt Blue / Lucid Lemon / Blue Spark",
+      "Recycled Content": "Contains at least 20% recycled materials"
+    },
+    "Images": ["5.1.png", "5.2.png", "5.3.png"]
+  },
+  {
+    "ID": "06",
+    "Name": "Nike Air Force 1 '07",
+    "Category": "Sneakers",
+    "Brand": "Nike",
+    "Price": 39000,
+    "Description": "The Nike Air Force 1 '07 brings a fresh spin on the legendary b-ball OG, combining classic design with modern style. Featuring durable stitched overlays, clean finishes, and Nike Air cushioning, these shoes offer both heritage and comfort. The low-cut silhouette and padded collar add to the sleek look and plush feel, making them perfect for all-day wear.",
+    "Benefits": [
+      "Stitched overlays add durability, heritage style, and support.",
+      "Nike Air cushioning provides lightweight, all-day comfort.",
+      "Low-cut silhouette for a streamlined, classic look."
+    ],
+    "ProductDetails": {
+      "Midsole": "Foam",
+      "Toe": "Perforations",
+      "Sole": "Rubber",
+      "Color": "White/White"
+    },
+    "Images": ["6.1.png", "6.2.png", "6.3.png"]
+  },
+  {
+    "ID": "07",
+    "Name": "Air Jordan 3 Retro 'Cement Grey'",
+    "Category": "Sneakers",
+    "Brand": "Air Jordan",
+    "Price": 70000,
+    "Description": "The Air Jordan 3 Retro 'Cement Grey' combines timeless style with modern comfort. Featuring high-quality leather in the upper with the iconic elephant print texture, it offers durability and a premium feel. The visible Nike Air unit in the sole provides street-ready cushioning, making it a standout choice for everyday wear.",
+    "Benefits": [
+      "Genuine and synthetic leathers deliver a durable and supportive fit.",
+      "Foam midsole with Air-Sole units in the heel and forefoot ensures superior cushioning.",
+      "Rubber outsole offers long-lasting durability and traction."
+    ],
+    "ProductDetails": {
+      "Color": "Summit White/Cement Grey/Black/Fire Red"
+    },
+    "Images": ["7.1.png", "7.2.png", "7.3.png"]
+  },
+  {
+    "ID": "08",
+    "Name": "Men's Sanati SL",
+    "Category": "Sneakers",
+    "Brand": "Fila",
+    "Price": 42000,
+    "Description": "The Men's Sanati SL combines relaxed style with premium craftsmanship. Featuring a durable and breathable Italian leather upper with front perforations, it delivers comfort and sophistication. Its chunky outsole adds a modern touch to the classic silhouette, making it a versatile option for leisure and style-conscious wearers.",
+    "Benefits": [
+      "Premium Italian leather and suede construction for durability and elegance.",
+      "Breathable perforations for enhanced comfort during extended wear.",
+      "Chunky outsole offers a modern twist on a classic design."
+    ],
+    "ProductDetails": {
+      "Color": "White/FILA Navy/Coronet Blue",
+      "Special Features": [
+        "Court sneakers with a spikeless golf shoe outsole for versatility.",
+        "Classic wing tip vamp and golf shoe detailing for elevated style."
+      ]
+    },
+    "Images": ["8.1.png", "8.2.png", "8.3.png"]
+  },
+  {
+    "ID": "09",
+    "Name": "Men's Targa NT",
+    "Category": "Sneakers",
+    "Brand": "Fila",
+    "Price": 13500,
+    "Description": "The Men's Targa NT is a streetwear staple that combines retro-revival design with modern comfort. Featuring a leather upper and iconic heritage styling, this leisure shoe delivers a bold and timeless look perfect for casual outings. Its durable construction ensures long-lasting wear, making it an essential addition to your wardrobe.",
+    "Benefits": [
+      "Premium leather and synthetic upper for durability and style.",
+      "Iconic heritage design embraces retro streetwear fashion.",
+      "Comfortable fit for everyday wear."
+    ],
+    "ProductDetails": {
+      "Color": "Tibetan Red/Black/Gardenia"
+    },
+    "Images": ["9.1.png", "9.2.png", "9.3.png"]
+  },
+  {
+    "ID": "10",
+    "Name": "Rivalry Low Shoes",
+    "Category": "Sneakers",
+    "Brand": "Adidas",
+    "Price": 13300,
+    "Description": "The Rivalry Low Shoes bring back the prestigious '80s basketball trainer with a modern twist for daily life. Originally popular on the court and later embraced by punks and skaters, this iconic sneaker features a soft leather and synthetic leather upper, terry lining for added comfort, and a durable rubber cupsole. Perfect for anyone looking to add '80s nostalgia to their everyday wardrobe.",
+    "Benefits": [
+      "Soft leather and synthetic leather upper for durability and style.",
+      "Terry lining adds a layer of comfort for all-day wear.",
+      "Rubber cupsole offers excellent grip and durability."
+    ],
+    "ProductDetails": {
+      "Closure": "Lace",
+      "Upper Material": "Leather and synthetic leather",
+      "Lining": "Terry",
+      "Outsole": "Rubber cupsole",
+      "Color": "Core Black / Cloud White / Core Black"
+    },
+    "Images": ["10.1.png", "10.2.png", "10.3.png"]
+  },
+  {
+    "ID": "11",
+    "Name": "Nike Lunar Force 1",
+    "Category": "Boots",
+    "Brand": "Nike",
+    "Price": 59500,
+    "Description": "The Nike Lunar Force 1 reimagines the iconic AF1 for cold, wet weather. Featuring water-repellent leather and a rugged outsole, it offers both style and functionality for challenging conditions. With mountain boot-inspired hardware, an oversized tongue, and durable star-studded design details, the Lunar Force 1 is built to keep you looking sharp and staying comfortable when the elements hit.",
+    "Benefits": [
+      "Water-repellent leather upper provides durability and easy cleaning.",
+      "Aggressive traction pattern on the rubber outsole enhances grip and durability.",
+      "Tongue wraps over the ankle to keep out moisture and cold, ensuring warmth and dryness."
+    ],
+    "ProductDetails": {
+      "Color": "Baroque Brown/Black/Metallic Silver/Baroque Brown"
+    },
+    "Images": ["11.1.png", "11.2.png", "11.3.png"]
+  },
+  {
+    "ID": "12",
+    "Name": "Nike SFB Gen 2 8”",
+    "Category": "Boots",
+    "Brand": "Nike",
+    "Price": 50500,
+    "Description": "The Nike SFB Gen 2 8” is a lightweight and durable tactical boot designed for speed, flexibility, and protection over rough terrain. Constructed with nylon canvas and synthetic leather, it offers breathability and durability. Featuring an aggressive traction pattern, internal rock shield, and Nike Free-inspired outsole, it provides multi-surface grip and natural movement, making it ideal for challenging environments.",
+    "Benefits": [
+      "Durable nylon canvas and polishable synthetic leather for breathability and long-lasting wear.",
+      "Internal rock shield helps prevent punctures and reduces pressure on rugged terrain.",
+      "Rubber outsole with reinforced heel strike zone ensures grip and durability on various surfaces."
+    ],
+    "ProductDetails": {
+      "Outsole": "Inspired by Nike Free technology",
+      "Sockliner": "Removable",
+      "Collar Height": "8 inches",
+      "Weight": "16.4 ounces (Men's size 10.5)",
+      "Special Features": [
+        "Dual-zone lacing with durable webbing for a locked-in fit.",
+        "Metal screen vents on the medial side for cooling.",
+        "Shallow flex grooves to prevent debris buildup."
+      ],
+      "Color": "Black/Black/Black"
+    },
+    "Images": ["12.1.png", "12.2.png", "12.3.png"]
+  },
+  {
+    "ID": "13",
+    "Name": "Men's Chastizer Boot",
+    "Category": "Boots",
+    "Brand": "Fila",
+    "Price": 25500,
+    "Description": "The Men's Chastizer Boot is designed for the toughest jobs, offering a durable and comfortable solution for demanding work environments. With a high-top silhouette made from a blend of leather, synthetics, and mesh, it ensures long-lasting wear and breathability. The EVA midsole and memory foam cushioning provide exceptional comfort, while the instep zipper closure and rubber toe cap enhance functionality and protection.",
+    "Benefits": [
+      "High ankle support and instep zipper closure ensure a secure fit and ease of wear.",
+      "Soft memory foam cushioning provides all-day comfort during strenuous tasks.",
+      "Durable leather, synthetic, and mesh construction for breathability and long-lasting performance."
+    ],
+    "ProductDetails": {
+      "Color": "Warm Sand/Warm Sand/Gum",
+      "Features": [
+        "EVA midsole for lightweight cushioning.",
+        "Rubber toe cap for added protection and durability."
+      ]
+    },
+    "Images": ["13.1.png", "13.2.png", "13.3.png"]
+  },
+  {
+    "ID": "14",
+    "Name": "Desierto V3 Men's Boots",
+    "Category": "Boots",
+    "Brand": "Puma",
+    "Price": 15300,
+    "Description": "Brace the cold with the Desierto V3 Boots, designed for winter conditions. With a warm lining and sturdy rubber outsole, these boots keep your feet snug and protected while offering a versatile design that easily pairs with any outfit. Ideal for colder months, they combine style with functionality.",
+    "Benefits": [
+      "SOFTFOAM+ sockliner provides soft cushioning and comfort with extra thick heel padding.",
+      "PUMAGRIP rubber compound ensures durable all-surface traction.",
+      "Sturdy synthetic upper and textile lining for warmth and durability."
+    ],
+    "ProductDetails": {
+      "Upper Material": "94.65% Synthetic, 5.35% Textile",
+      "Lining": "100% Textile",
+      "Sockliner": "100% Textile",
+      "Outsole": "100% Rubber",
+      "Color": "Dark Olive-Dark Olive",
+      "Features": [
+        "PUMA Wordmark on the lateral side",
+        "PUMA Formstrip on the lateral side"
+      ]
+    },
+    "Images": ["14.1.png", "14.2.png", "14.3.png"]
+  },
+  {
+    "ID": "15",
+    "Name": "Desierto V3 Puretex Men's Boots",
+    "Category": "Boots",
+    "Brand": "Puma",
+    "Price": 16800,
+    "Description": "The Desierto V3 Puretex Men's Boots provide the ultimate combination of comfort and protection for winter. Featuring a warm fur lining, a sturdy PUMAGRIP ATR outsole, and PureTex waterproofing, these boots are built to tackle harsh weather conditions while maintaining a versatile, pared-back design for everyday wear.",
+    "Benefits": [
+      "SOFTFOAM+ sockliner provides step-in comfort with extra thick heel cushioning.",
+      "PUMAGRIP ATR outsole ensures superior traction on ice, mud, and unstable surfaces.",
+      "PureTex waterproofing offers added protection against the elements."
+    ],
+    "ProductDetails": {
+      "Upper Material": "94.65% Synthetic, 5.35% Textile",
+      "Lining": "100% Textile",
+      "Sockliner": "100% Textile",
+      "Outsole": "100% Rubber",
+      "Waterproofing": "PureTex",
+      "Features": [
+        "PUMAGRIP ATR outsole",
+        "PUMA Formstrip on lateral and medial sides",
+        "PUMA branding details"
+      ],
+      "Color": "PUMA Black-PUMA Black"
+    },
+    "Images": ["15.1.png", "15.2.png", "15.3.png"]
+  },
+  {
+    "ID": "16",
+    "Name": "Jordan Hydro XI",
+    "Category": "Slides",
+    "Brand": "Jordan",
+    "Price": 22500,
+    "Description": "The Jordan Hydro XI is the perfect slide for comfort and style, whether you're stepping off the court or strolling across the yard. Designed with a cushioned footbed and adjustable midfoot strap, it offers a customized fit and all-day support. Flex grooves on the outsole enhance natural movement, making it a reliable choice for relaxed wear.",
+    "Benefits": [
+      "Adjustable midfoot strap for a personalized, secure fit.",
+      "Flex grooves on the outsole improve flexibility and natural motion.",
+      "Cushioned footbed ensures comfort for extended wear."
+    ],
+    "ProductDetails": {
+      "Special Feature": "Embroidered Jumpman logo for iconic style.",
+      "Color": "White/Black/Legend Blue"
+    },
+    "Images": ["16.1.png", "16.2.png", "16.3.png"]
+  },
+  {
+    "ID": "17",
+    "Name": "Adilette Shower Slides",
+    "Category": "Slides",
+    "Brand": "Adidas",
+    "Price": 4900,
+    "Description": "The Adilette Shower Slides offer versatile comfort and iconic style, perfect for a work-hard-rest-hard lifestyle. From the pool deck to the shower or the couch, these slip-on slides provide lightweight cushioning and a snug fit that is easy to kick on and off. The contoured footbed and Cloudfoam midsole keep your feet cradled in comfort throughout the day, while the adidas Badge of Sport adds a touch of signature style.",
+    "Benefits": [
+      "Slip-on construction for easy wear and a snug fit.",
+      "Cloudfoam midsole offers lightweight, all-day cushioning.",
+      "Contoured footbed ensures comfort and support with every step."
+    ],
+    "ProductDetails": {
+      "Fit": "Regular",
+      "Closure": "Slip-on",
+      "Upper Material": "Synthetic",
+      "Lining": "Textile",
+      "Footbed": "Contoured",
+      "Midsole": "Cloudfoam",
+      "Outsole": "Synthetic",
+      "Color": "Core Black / Cloud White / Core Black"
+    },
+    "Images": ["17.1.png", "17.2.png", "17.3.png"]
+  },
+  {
+    "ID": "18",
+    "Name": "Adilette Aqua Slides",
+    "Category": "Slides",
+    "Brand": "Adidas",
+    "Price": 4250,
+    "Description": "The Adilette Aqua Slides are designed for post-swim comfort, offering enhanced cushioning to soothe tired feet. These shower-friendly sandals feature a simple slip-on design with signature 3-Stripes, and the soft Cloudfoam footbed provides plush comfort. The quick-drying material ensures that your slides stay fresh and ready for your next adventure.",
+    "Benefits": [
+      "Soft Cloudfoam footbed provides plush comfort after swimming.",
+      "Quick-drying material ensures comfort and convenience post-swim.",
+      "One-piece moulded EVA upper and EVA outsole for a lightweight, durable feel."
+    ],
+    "ProductDetails": {
+      "Fit": "Regular",
+      "Closure": "Slip-on",
+      "Upper Material": "One-piece moulded EVA",
+      "Outsole": "EVA",
+      "Footbed": "Soft Cloudfoam",
+      "Material": "Lightweight, Quick-drying",
+      "Color": "Dark Blue / Cloud White / Dark Blue"
+    },
+    "Images": ["18.1.png", "18.2.png", "18.3.png"]
+  },
+  {
+    "ID": "19",
+    "Name": "SoftridePro 24 V Slides",
+    "Category": "Slides",
+    "Brand": "Puma",
+    "Price": 12000,
+    "Description": "The SoftridePro 24 V Slides are perfect for post-sport relaxation or making a statement on the street. With a Softride compound insole for exceptional comfort, a padded synthetic leather strap for a snug fit, and a slip-on design for convenience, these slides blend functionality with eco-friendly materials.",
+    "Benefits": [
+      "Softride compound insole provides excellent cushioning for lasting comfort.",
+      "Eco-friendly design with 30% recycled materials in the upper and 10% recycled materials in the outsole.",
+      "Light molded EVA outsole ensures durability and lightweight support."
+    ],
+    "ProductDetails": {
+      "Upper Material": "100% Synthetic",
+      "Lining": "100% Textile",
+      "Sockliner": "100% Synthetic",
+      "Outsole": "100% Synthetic",
+      "Design": "Slip-on for easy wear",
+      "Special Features": [
+        "Soft molded footbed",
+        "Durable synthetic upper",
+        "PUMA Cat Logo on strap"
+      ],
+      "Color": "PUMA White-Dark Myrtle"
+    },
+    "Images": ["19.1.png", "19.2.png", "19.3.png"]
+  },
+  {
+    "ID": "20",
+    "Name": "Shibui Cat Slides",
+    "Category": "Slides",
+    "Brand": "Puma",
+    "Price": 13500,
+    "Description": "The Shibui Cat Slides deliver minimalist style and extreme comfort with a fully injected IMEVA slide for a lightweight, snug feel. Perfect for home or casual outings, these slides pair functionality with a sleek design featuring PUMA Cat Logo branding.",
+    "Benefits": [
+      "Lightweight and comfortable feel with PUMA's IMEVA material.",
+      "Fully injected slide ensures a snug and supportive fit.",
+      "Minimalist design with subtle PUMA Cat Logo branding for a stylish finish."
+    ],
+    "ProductDetails": {
+      "Material": "Fully injected IMEVA",
+      "Branding": "Minimalist PUMA Cat Logo",
+      "Design": "Lightweight and minimalist",
+      "Color": "Vapor Gray"
+    },
+    "Images": ["20.1.png", "20.2.png", "20.3.png"]
+  }
+]
