@@ -6,7 +6,7 @@ MAX_RETRIES=10
 RETRY_DELAY=5
 RETRIES=0
 
-while ! nc -z mongo 27017; do
+while ! nc -z mongodb 27017; do
   RETRIES=$((RETRIES + 1))
   if [ $RETRIES -ge $MAX_RETRIES ]; then
     echo "MongoDB is sleeping. Could not establish a connection."

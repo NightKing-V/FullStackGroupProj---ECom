@@ -12,11 +12,11 @@ RUN npm install --production
 COPY src ./src
 
 # Copy entrypoint script and make it executable
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY docker-entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Expose the application port
-EXPOSE 3000
+EXPOSE 5000
 
 # Use entrypoint script
 ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
