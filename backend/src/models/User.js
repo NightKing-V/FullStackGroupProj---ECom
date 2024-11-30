@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-// Define the User schema
+//User schema
 const UserSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -52,7 +52,10 @@ UserSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();
 
   try {
-    const salt = await bcrypt.genSalt(10);
+    const saltRounds = process.env.SALT_VALUE || 10;
+    const salt = await bcrypt.genSalt(Number(saltRounds));
+    
+    // Hash the password
     this.password = await bcrypt.hash(this.password, salt);
     next();
   } catch (err) {

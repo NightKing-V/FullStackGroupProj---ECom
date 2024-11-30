@@ -4,6 +4,8 @@
   "main": "index.js",
   "scripts": {
     "migrate": "node src/seeds/seed.js",
+    "seed": "node src/seeds/seed.js",
+    "truncate": "node src/seeds/truncate.js",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
@@ -13,6 +15,7 @@
   "description": "",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mongoose": "^8.8.2"

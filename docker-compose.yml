@@ -8,6 +8,7 @@ services:
     environment:
       - APP_ENV=local
       - APP_DEBUG=true
+      - NEXT_API_BASE_URL=http://backend:5000
     volumes:
       - app-data:/var/www/html
       - ./.env:/var/www/html/public/.env
@@ -28,7 +29,9 @@ services:
       - MONGO_PASSWORD=passw0rd123!
       - MONGO_HOST=mongodb
       - MONGO_PORT=27017
-      - MONGO_DATABASE=ecomdb
+      - MONGO_DATABASE=xsoles_db
+      - JWT_SECRET_KEY=xsol123es
+      - SALT_VALUE=10
     volumes:
       - backend-data:/usr/src/app
       - ./.env:/usr/src/app/.env

@@ -17,13 +17,17 @@ services:
     container_name: backend_service
     restart: always
     environment:
+      environment:
       - APP_ENV=local
       - APP_DEBUG=true
       - DB_SEED=true
-      - MONGO_URI=mongodb://root:example@mongodb:27017/mydatabase
       - MONGO_USERNAME=root
       - MONGO_PASSWORD=passw0rd123!
-      - MONGO_DATABASE=ecomdb
+      - MONGO_HOST=mongodb
+      - MONGO_PORT=27017
+      - MONGO_DATABASE=xsoles_db
+      - JWT_SECRET_KEY=xsol123es
+      - SALT_VALUE=10
     volumes:
       - backend-data:/usr/src/app
       - ./.env:/usr/src/app/.env

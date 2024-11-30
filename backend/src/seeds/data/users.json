@@ -1,6 +1,6 @@
 [
     {
-      "email": "admin@example.com",
+      "email": "admin@xsoles.com",
       "firstName": "Admin",
       "lastName": "User",
       "address": {
@@ -11,7 +11,7 @@
         "country": "Adminland"
       },
       "role": "admin",
-      "password": "adminpassword"
+      "password": "admin"
     },
     {
       "email": "john.doe@example.com",
