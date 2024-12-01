@@ -4,6 +4,7 @@ const connectDB = require('./config/dbConn');
 
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
+const cartRoutes = require('./routes/cartRoutes');
 const productRoutes = require('./routes/productRoutes');
 
 const app = express();
@@ -33,6 +34,9 @@ app.use('/api/v1/users', userRoutes);
 
 // Product routes
 app.use('/api/v1/products', productRoutes);
+
+// Cart routes
+app.use('/api/v1/cart', cartRoutes);
 
 // Start the server
 app.listen(PORT, () => {

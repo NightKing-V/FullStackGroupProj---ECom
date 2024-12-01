@@ -4,6 +4,7 @@ const connectDB = require('../config/dbConn');
 
 const User = require('../models/User');
 const Product = require('../models/Product');
+const Cart = require('../models/Cart');
 
 // more models
 
@@ -16,6 +17,7 @@ const truncateData = async () => {
     // Drop the collections (this removes both data and schema)
     await User.collection.drop(); 
     await Product.collection.drop();
+    await Cart.collection.drop();
     // more collections
     
     console.log('Collections dropped successfully.');

@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const Cart = require('./Cart');
 
-//User schema
+// User schema
 const UserSchema = new mongoose.Schema({
   email: {
     type: String,
@@ -62,6 +63,28 @@ UserSchema.pre('save', async function (next) {
     next(err);
   }
 });
+
+// Post-save hook: Automatically create a cart when a new user is added
+UserSchema.post('save', function (doc, next) {
+  console.log('User saved:', doc._id);
+
+  const cart = new Cart({
+    user: doc._id,
+    products: []
+  });
+
+  cart.save()
+    .then(() => {
+      console.log('Cart created for user:', doc._id);
+      next();
+    })
+    .catch((err) => {
+      console.error('Error creating cart for user:', doc._id, err);
+      next(err);
+    });
+});
+
+
 
 // Method to compare passwords
 UserSchema.methods.comparePassword = async function (candidatePassword) {
