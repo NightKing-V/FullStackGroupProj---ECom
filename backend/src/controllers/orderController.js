@@ -145,3 +145,41 @@ exports.listUserOrders = async (req, res) => {
     }
   };
   
+  exports.updateOrder = async (req, res) => {
+    try {
+      const userId = req.user.userId;
+      const { status, orderId } = req.body;
+
+      const validStatuses = ['Pending', 'Shipped', 'Delivered', 'Cancelled'];
+      if (!validStatuses.includes(status)) {
+        return res.status(400).json({ error: 'Invalid order status' });
+      }
+
+      const order = await Order.findOne({ _id: orderId, user: userId });
+  
+      if (!order) {
+        return res.status(404).json({ error: 'Order not found or user is not authorized to update this order' });
+      }
+      if(order.orderStatus != "Cancelled"){
+          order.orderStatus = status;
+          await order.save();
+      
+          return res.status(200).json({
+            message: 'Order status updated successfully',
+            order: {
+              orderId: order._id,
+              orderStatus: order.orderStatus,
+              products: order.products,
+              totalAmount: order.totalAmount,
+              shippingAddress: order.shippingAddress,
+              orderDate: order.createdAt,
+            }
+          });
+      }else{
+        return res.status(400).json({message: 'Order already Cancelled'});
+      }
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: 'Server error while updating order status' });
+    }
+  };
