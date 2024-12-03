@@ -1,5 +1,5 @@
 # Define the domains to add
-$domains = @("fe.localhost", "be.localhost", "me.localhost")
+$domains = @("fe.localhost", "be.localhost", "me.localhost", "mockpay.localhost")
 $hostsFile = "C:\Windows\System32\drivers\etc\hosts"
 
 # Function to add a domain to the hosts file

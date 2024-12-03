@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the domains to add
-DOMAINS=("fe.localhost" "be.localhost" "me.localhost")
+DOMAINS=("fe.localhost" "be.localhost" "me.localhost" "mockpay.localhost")
 HOSTS_FILE="/etc/hosts"
 
 # Function to add a domain to the hosts file
