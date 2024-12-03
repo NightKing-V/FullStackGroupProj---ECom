@@ -1,0 +1,6 @@
+# Exclude Next.js build files
+.next
+node_modules
+npm-debug.log
+Dockerfile
+.dockerignore

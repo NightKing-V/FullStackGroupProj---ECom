@@ -50,4 +50,24 @@ const isAdmin = async (req, res, next) => {
     }
   };
   
-  module.exports = { authenticate, isAdmin };
+  // Middleware to check for valid access key
+const validateAccessKey = (req, res, next) => {
+  const apiKey = req.headers['x-api-key'];
+  const timestamp = req.headers['x-timestamp'];
+
+  // Check if the API key is correct
+  if (apiKey !== process.env.PAYMENT_API_KEY) {
+    return res.status(403).json({ error: 'Forbidden: Invalid API key' });
+  }
+
+  // Check if the timestamp is within acceptable range (e.g., 5 minutes)
+  const currentTime = Math.floor(Date.now() / 1000); // Time in seconds
+  if (Math.abs(currentTime - timestamp) > 300) {
+    return res.status(400).json({ error: 'Request expired' });
+  }
+
+  next();
+};
+
+
+  module.exports = { authenticate, isAdmin, validateAccessKey };

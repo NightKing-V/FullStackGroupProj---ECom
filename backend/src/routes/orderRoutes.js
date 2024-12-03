@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { createOrder, cancelOrder, listUserOrders, updateOrder } = require('../controllers/orderController');
-const { authenticate, isAdmin } = require('../middlewares/authMiddleware');
+const { createOrder, cancelOrder, listUserOrders, updateOrder, paymentCallback } = require('../controllers/orderController');
+const { authenticate, isAdmin, validateAccessKey } = require('../middlewares/authMiddleware');
 
 // Create a order
 router.post('/create',authenticate, createOrder);
@@ -14,5 +14,8 @@ router.get('/list',authenticate, listUserOrders);
 
 // Update a order status (Admin)
 router.post('/update', authenticate, isAdmin, updateOrder);
+
+// Callback for payment gateway
+router.post('/payment-callback',validateAccessKey, paymentCallback)
 
 module.exports = router;

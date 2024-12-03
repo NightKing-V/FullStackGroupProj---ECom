@@ -2,30 +2,28 @@ const Cart = require("../models/Cart");
 const Order = require("../models/Order");
 const Product = require("../models/Product");
 const User = require("../models/User");
+const fetch = require('node-fetch');
 
 exports.createOrder = async (req, res) => {
   try {
     const userId = req.user.userId;
 
-    const cart = await Cart.findOne({ user: userId }).populate(
-      "products.product"
-    );
+    // Get the cart data for the user
+    const cart = await Cart.findOne({ user: userId }).populate("products.product");
 
     if (!cart || cart.products.length === 0) {
-      return res
-        .status(400)
-        .json({ error: "Your cart is empty. Add products to the cart first." });
+      return res.status(400).json({ error: "Your cart is empty. Add products to the cart first." });
     }
 
     const user = await User.findById(userId);
-
     if (!user) {
       return res.status(404).json({ error: "User not found" });
     }
 
     const shippingAddress = user.address;
-
     let totalAmount = 0;
+
+    // Prepare the order items
     const orderProducts = cart.products.map((item) => {
       const totalPrice = item.quantity * item.product.Price;
       totalAmount += totalPrice;
@@ -38,28 +36,51 @@ exports.createOrder = async (req, res) => {
       };
     });
 
+    // Create a new order (set it as "Pending" for now)
     const order = new Order({
       user: userId,
       products: orderProducts,
       totalAmount,
       shippingAddress,
-      orderStatus: "Pending",
+      orderStatus: "Unpaid", // Order is pending until payment is successful
     });
 
     await order.save();
 
-    await Cart.updateOne({ user: userId }, { $set: { products: [] } });
+    // Clear the cart after the order is created
+    await Cart.findOneAndUpdate({ user: userId }, { $set: { products: [] } });
 
-    return res
-      .status(201)
-      .json({ message: "Order placed successfully", order });
+    // Initiate the payment session
+    const paymentResponse = await fetch(`${process.env.PAYMENT_GATEWAY_URL}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        amount: totalAmount,  // Total amount for the payment
+        currency: "LKR",
+        reference_id: order._id,   // Pass the order ID
+      }),
+    });
+
+    const paymentData = await paymentResponse.json();
+    if (paymentData.paymentUrl) {
+      // Respond with the payment URL to the frontend
+      return res.status(201).json({
+        message: 'Unpaid order created, awaiting payment.',
+        orderId: order._id,
+        paymentUrl: paymentData.paymentUrl,  // Send payment URL to frontend
+      });
+    } else {
+      // If payment initiation fails, handle the error
+      return res.status(500).json({ error: 'Payment initiation failed' });
+    }
   } catch (error) {
     console.error(error);
-    return res
-      .status(500)
-      .json({ error: "Server error while placing the order" });
+    return res.status(500).json({ error: 'Server error while creating order' });
   }
 };
+
 
 exports.cancelOrder = async (req, res) => {
   try {
@@ -183,3 +204,38 @@ exports.listUserOrders = async (req, res) => {
       return res.status(500).json({ error: 'Server error while updating order status' });
     }
   };
+
+  exports.paymentCallback = async (req, res) => {
+    try {
+      const { reference_id, paymentStatus } = req.body;  // Assuming paymentStatus is passed as query param
+      const orderId = reference_id;
+      console.log(reference_id)
+      // Retrieve the order
+      const order = await Order.findById(orderId);
+      if (!order) {
+        return res.status(404).json({ error: 'Order not found' });
+      }
+  
+      if (order.orderStatus !== 'Unpaid') {
+        return res.status(400).json({ error: 'Order has already been processed' });
+      }
+  
+      // If payment is successful, update order status to "Completed"
+      if (paymentStatus === 'success') {
+        order.orderStatus = 'Pending';
+        await order.save();
+        
+        return res.status(200).json({ status:"success", message: 'Payment successful, order completed' });
+      } else {
+        // Handle payment failure (optional)
+        order.orderStatus = 'Failed';
+        await order.save();
+        
+        return res.status(400).json({ error: 'Payment failed, order not completed' });
+      }
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: 'Error processing payment' });
+    }
+  };
+  

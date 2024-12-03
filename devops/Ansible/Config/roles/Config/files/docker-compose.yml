@@ -1,5 +1,5 @@
 services:
-  web-frontend:
+  frontend:
     image: ${ansi_frontend_image}
     container_name: app
     restart: always
@@ -28,6 +28,8 @@ services:
       - MONGO_DATABASE=xsoles_db
       - JWT_SECRET_KEY=xsol123es
       - SALT_VALUE=10
+      - PAYMENT_GATEWAY_URL=http://localhost:8083/payment/initiate
+      - PAYMENT_API_KEY=19921c95610639ccf13b2be8ac923d793169b1b933eabe96c132d0edccb26a39
     volumes:
       - backend-data:/usr/src/app
       - ./.env:/usr/src/app/.env
@@ -63,6 +65,22 @@ services:
       - mongodb-data:/data/db
     networks:
       - app-network
+
+  mockpay:
+  image: diyrex5224/mockpay:latest
+  container_name: mockpay
+  restart: always
+  environment:
+    - MONGO_CONN_STRING=mongodb://root:passw0rd123!@mongodb:27017/xsoles_db?authSource=admin
+    - APP_URL=http://mockpay:8083
+    - REDIRECT_CALLBACK_URL=http://backend:5000/api/v1/order/payment-callback
+    - REDIRECT_URL=http://frontend:3000
+    - PAYMENT_API_KEY=19921c95610639ccf13b2be8ac923d793169b1b933eabe96c132d0edccb26a39
+  volumes:
+    - mongodb-data:/data/db
+  networks:
+    - app-network
+      
 
 networks:
   app-network:
