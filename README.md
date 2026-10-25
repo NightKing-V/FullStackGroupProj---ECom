@@ -1,2 +1,2 @@
 # FullStackGroupProj---ECom
-E Commerce Web Application
+E-commerce Web Application
